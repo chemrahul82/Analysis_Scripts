@@ -8,15 +8,11 @@
 sample_name=$1
 normal_bam=$2
 tumor_bam=$3
-echo "[$(date):] Execution started for "$sample_name
+echo "[$(date):] Execution started for "$sample_name "on" $normal_bam "and" $tumor_bam
 
 fastafile="/results/referenceLibrary/tmap-f3/hg19/hg19.fasta"
 varscan="/rawdata/software/varscan/VarScan.v2.4.1.jar"
 bamreadcount="/rawdata/software/bam-readcount/bin/bam-readcount"
-#normal merged bam/single bam
-normal_bam="/rawdata/projects/Radiogenomics/$sample_name/Normal/N-2/PTRIM.bam"
-#tumor_merged bam/single bam
-tumor_bam="/rawdata/projects/Radiogenomics/$sample_name/Tumor/Merged/PTRIM.bam"
 currdir=$(pwd)
 vardir="VarScan_Analysis"
 mkdir -p "/rawdata/projects/Radiogenomics/$sample_name/$vardir"
