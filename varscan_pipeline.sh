@@ -19,7 +19,7 @@ varscan="/rawdata/software/varscan/VarScan.v2.4.1.jar"
 bamreadcount="/rawdata/software/bam-readcount/bin/bam-readcount"
 currdir=$(pwd)
 workdir="$projdir/$sample_name/VarScan_Analysis/"
-echo $workdir
+#echo $workdir
 
 #make working directory
 if [ -d $workdir ];
